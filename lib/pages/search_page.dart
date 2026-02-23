@@ -46,6 +46,9 @@ class _SearchPageState extends State<SearchPage> {
             ),
           )
           .toList();
+      setState(() {
+        this.tracks = tracks;
+      });
     } else {
       print("Error en la petición");
     }
