@@ -3,6 +3,7 @@ import 'package:lab2261/components/main_app_bar.dart';
 import 'package:lab2261/components/main_floating_button.dart';
 import 'package:lab2261/pages/playlist_page.dart';
 import 'package:lab2261/pages/profile_page.dart';
+import 'package:lab2261/pages/search_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,8 +14,8 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
-  final List<String> _titles = ['Profile', 'Playlists'];
-  final List<String> _buttonText = ['Editar', 'Crear'];
+  final List<String> _titles = ['Profile', 'Search', 'Playlists'];
+  final List<String> _buttonText = ['Editar', 'Buscar', 'Crear'];
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
       appBar: MainAppBar(title: _titles[_currentIndex]),
       body: IndexedStack(
         index: _currentIndex,
-        children: const [ProfilePage(), PlaylistPage()],
+        children: const [ProfilePage(), SearchPage(), PlaylistPage()],
       ),
       floatingActionButton: MainFloatingButton(
         text: _buttonText[_currentIndex],
@@ -46,6 +47,7 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.person_outline),
             label: 'Profile',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_music_outlined),
             label: 'Playlists',
