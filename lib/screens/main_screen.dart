@@ -26,12 +26,6 @@ class _MainScreenState extends State<MainScreen> {
         index: _currentIndex,
         children: const [ProfilePage(), SearchPage(), PlaylistPage()],
       ),
-      floatingActionButton: MainFloatingButton(
-        text: _buttonText[_currentIndex],
-        onPressed: () {
-          Navigator.pushNamed(context, '/playlist/new');
-        },
-      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
         currentIndex: _currentIndex,
