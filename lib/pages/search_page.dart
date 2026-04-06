@@ -14,7 +14,7 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   List<Track> tracks = [];
-  // 1. Añadimos el controlador para el TextField
+
   final TextEditingController _searchController = TextEditingController();
 
   @override
