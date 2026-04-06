@@ -61,7 +61,12 @@ class _SearchPageState extends State<SearchPage> {
             ],
           ),
         ),
-        ElevatedButton(onPressed: () {}, child: Text("Buscar con modal")),
+        ElevatedButton(
+          onPressed: () {
+            showSearchModal(context);
+          },
+          child: Text("Buscar con modal"),
+        ),
 
         // Lista de resultados
         Expanded(
