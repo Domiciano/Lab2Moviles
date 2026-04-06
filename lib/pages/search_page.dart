@@ -22,7 +22,18 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Text("Tracks")]);
+    return Column(
+      children: [
+        Expanded(
+          child: ListView.builder(
+            itemCount: tracks.length,
+            itemBuilder: (context, index) {
+              return TrackListItem(track: tracks[index]);
+            },
+          ),
+        ),
+      ],
+    );
   }
 
   Future<void> obtenerDato() async {
