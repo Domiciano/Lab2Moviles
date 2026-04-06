@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lab2261/screens/bloc_example_screen.dart';
 import 'package:lab2261/screens/cubit_example_screen.dart';
-import 'package:lab2261/screens/main_screen.dart';
 import 'package:lab2261/screens/new_playlist_screen.dart';
 
 void main() {
